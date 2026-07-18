@@ -1,0 +1,478 @@
+/* ================= GENERAL ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:65px;
+    margin-right:10px;
+}
+
+.logo h2{
+    color:#002b5b;
+    font-size:30px;
+}
+
+.logo p{
+    color:#b8860b;
+    font-size:12px;
+}
+
+.navbar ul{
+    display:flex;
+    list-style:none;
+}
+
+.navbar ul li{
+    margin:0 12px;
+}
+
+.navbar ul li a{
+    text-decoration:none;
+    color:#002b5b;
+    font-weight:bold;
+    padding-bottom:6px;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active{
+    color:#d89a27;
+    border-bottom:3px solid #d89a27;
+}
+
+.icons{
+    display:flex;
+    align-items:center;
+}
+
+.search-box{
+    display:flex;
+    border:1px solid #ccc;
+    border-radius:5px;
+    overflow:hidden;
+}
+
+.search-box input{
+    border:none;
+    outline:none;
+    padding:8px;
+    width:160px;
+}
+
+.search-box button{
+    border:none;
+    background:#002b5b;
+    color:white;
+    padding:8px 12px;
+    cursor:pointer;
+}
+
+.icons a{
+    color:#002b5b;
+    font-size:22px;
+    margin-left:18px;
+    text-decoration:none;
+}
+
+.icons a:hover{
+    color:#d89a27;
+}
+
+/* ================= ABOUT BANNER ================= */
+
+.about-banner{
+    width:100%;
+    background:#dceaf8;
+    padding:50px;
+}
+
+.overlay{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.left-text{
+    width:40%;
+}
+
+.path{
+    color:#666;
+    margin-bottom:15px;
+}
+
+.left-text h1{
+    font-size:55px;
+    color:#002b5b;
+}
+
+.line{
+    width:70px;
+    height:4px;
+    background:#d89a27;
+    margin:20px 0;
+}
+
+.left-text p{
+    line-height:28px;
+    color:#333;
+    font-size:17px;
+}
+
+.right-image{
+    width:55%;
+}
+
+.right-image img{
+    width:100%;
+    border-radius:10px;
+}
+/* WHO WE ARE */
+
+.who{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:50px;
+
+gap:30px;
+
+}
+
+.who-image{
+
+width:35%;
+
+position:relative;
+
+}
+
+.who-image img{
+
+width:100%;
+
+border-radius:10px;
+
+}
+
+.small-box{
+
+background:#002b5b;
+
+color:white;
+
+padding:15px;
+
+width:220px;
+
+position:absolute;
+
+bottom:20px;
+
+left:20px;
+
+border-radius:8px;
+
+}
+
+.small-box i{
+
+font-size:28px;
+
+color:gold;
+
+margin-bottom:10px;
+
+}
+
+.who-text{
+
+width:35%;
+
+}
+
+.who-text h2{
+
+color:#002b5b;
+
+margin-bottom:10px;
+
+}
+
+.line{
+
+width:70px;
+
+height:4px;
+
+background:orange;
+
+margin:15px 0;
+
+}
+
+.who-text p{
+
+line-height:28px;
+
+}
+
+.mission{
+
+width:25%;
+
+}
+
+.mission div{
+
+margin-bottom:35px;
+
+}
+
+.mission i{
+
+font-size:32px;
+
+color:#002b5b;
+
+margin-bottom:10px;
+
+}
+
+/* ACHIEVEMENTS */
+
+.achievement{
+
+display:flex;
+
+justify-content:space-around;
+
+padding:40px;
+
+background:#f4f4f4;
+
+}
+
+.card{
+
+background:white;
+
+padding:30px;
+
+text-align:center;
+
+width:22%;
+
+border-radius:10px;
+
+box-shadow:0px 0px 10px lightgray;
+
+}
+
+.card i{
+
+font-size:40px;
+
+color:#002b5b;
+
+margin-bottom:15px;
+
+}
+
+.card h2{
+
+color:#002b5b;
+
+font-size:35px;
+
+}
+
+.card p{
+
+margin-top:10px;
+
+}
+
+/* TEAM */
+
+.team{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:60px;
+
+align-items:center;
+
+}
+
+.team-text{
+
+width:50%;
+
+}
+
+.team-text h2{
+
+color:#002b5b;
+
+}
+
+.team-text p{
+
+line-height:28px;
+
+margin-top:15px;
+
+}
+
+.team-image{
+
+width:40%;
+
+}
+
+.team-image img{
+
+width:100%;
+
+border-radius:10px;
+
+}
+
+/* CTA */
+
+.cta{
+
+background:#002b5b;
+
+color:white;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:40px 60px;
+
+margin-top:50px;
+
+}
+
+.contact-btn{
+
+background:orange;
+
+padding:15px 35px;
+
+text-decoration:none;
+
+color:black;
+
+font-weight:bold;
+
+border-radius:5px;
+
+}
+
+.contact-btn:hover{
+
+background:white;
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:#001c3d;
+
+color:white;
+
+margin-top:0;
+
+}
+
+.footer-container{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:50px;
+
+}
+
+.footer-about{
+
+width:35%;
+
+}
+
+.footer-links{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.footer-links a{
+
+color:white;
+
+text-decoration:none;
+
+margin:8px 0;
+
+}
+
+.footer-links a:hover{
+
+color:gold;
+
+}
+
+.footer-contact p{
+
+margin:10px 0;
+
+}
+
+.bottom-footer{
+
+background:#000f24;
+
+text-align:center;
+
+padding:15px;
+
+}
