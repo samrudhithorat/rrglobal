@@ -1,0 +1,329 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+
+body{
+background:#fff;
+}
+
+
+
+/* HEADER */
+
+.top{
+
+height:85px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 30px;
+
+}
+
+
+.logo{
+display:flex;
+align-items:center;
+}
+
+
+.logo img{
+width:180px;
+height:auto;
+}
+
+
+
+.contact span{
+
+margin-left:25px;
+font-size:13px;
+
+}
+
+
+
+
+/* NAVBAR */
+
+
+nav{
+
+background:#002b5c;
+padding:15px;
+
+}
+
+
+nav ul{
+
+display:flex;
+justify-content:center;
+gap:30px;
+list-style:none;
+
+}
+
+
+
+nav a,nav i{
+
+color:white;
+text-decoration:none;
+font-size:14px;
+
+}
+
+
+nav button{
+
+background:none;
+border:none;
+color:white;
+
+}
+
+
+.count{
+
+background:#c99432;
+border-radius:50%;
+padding:3px 6px;
+font-size:10px;
+
+}
+
+
+
+
+/* SEARCH */
+
+
+#search{
+
+display:none;
+text-align:center;
+padding:15px;
+
+}
+
+
+#search input{
+
+width:400px;
+padding:10px;
+
+}
+
+
+
+
+
+/* LOGIN */
+
+
+.login-section{
+
+width:90%;
+margin:30px auto;
+
+background:#eef6ff;
+
+border-radius:30px;
+
+display:flex;
+padding:40px;
+
+}
+
+
+
+.left{
+
+width:50%;
+padding:40px;
+
+}
+
+
+
+.left h1{
+
+font-size:35px;
+
+}
+
+
+.left span{
+
+color:#c08b28;
+
+}
+
+
+.left img{
+
+width:400px;
+
+}
+
+
+
+
+
+.login-box{
+
+background:white;
+padding:35px;
+
+width:600px;
+height:600px;
+
+border-radius:25px;
+
+box-shadow:0 0 20px #ccc;
+
+}
+
+
+
+.login-box h1{
+
+text-align:center;
+color:#07336b;
+
+}
+.login-box p{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.login-box label{
+    padding-top:15px;
+}
+
+
+.login-box input{
+
+width:100%;
+padding:12px;
+margin:10px 0;
+
+border:1px solid #ddd;
+
+}
+
+
+
+.remember{
+
+font-size:13px;
+padding-bottom:10px;
+
+}
+
+
+.remember a{
+
+float:right;
+
+}
+
+
+
+.login-btn{
+
+width:100%;
+background:#073b82;
+color:white;
+border:0;
+padding-top:12px;
+padding-bottom:12px;
+
+}
+.or{
+    padding-top:10px;
+    text-align:center;
+    padding-bottom:10px;
+}
+
+
+
+.google{
+
+width:100%;
+background:white;
+border:1px solid #ccc;
+padding-top:12px;
+padding-bottom:12px;
+
+}
+
+
+
+
+
+/* FOOTER */
+
+
+footer{
+
+background:#002b5c;
+color:white;
+
+padding:35px;
+
+}
+
+
+
+.footer-box{
+
+display:flex;
+justify-content:space-between;
+
+}
+
+
+.footer-box h3{
+
+color:#d49b32;
+
+}
+
+
+.footer-box p{
+
+font-size:13px;
+margin:8px 0;
+
+}
+
+
+.flogo{
+
+width:120px;
+
+}
+
+
+.bottom{
+
+margin-top:30px;
+border-top:1px solid white;
+padding-top:15px;
+
+font-size:13px;
+
+}
+
+
+.bottom span{
+
+float:right;
+
+}

@@ -1,18 +1,14 @@
 /* ================= GENERAL ================= */
 
 *{
-
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
-
 }
 
 body{
-
-background:#f4f6f9;
-
+background:#f5f5f5;
 }
 
 /* ================= NAVBAR ================= */
@@ -30,47 +26,41 @@ height: 80px;
 }
 
 .logo{
-
 display:flex;
 align-items:center;
-
 }
 
 .logo img{
-
 width:180px;
 height:auto;
 margin-right:10px;
-
 }
 
-.navbar ul{
 
+
+.navbar ul{
 display:flex;
 list-style:none;
-
 }
 
 .navbar ul li{
-
-margin:0 14px;
-
+margin:0 12px;
 }
 
 .navbar ul li a{
 
 text-decoration:none;
-font-weight:bold;
 color:#002b5b;
-padding-bottom:6px;
+font-weight:bold;
+padding-bottom:8px;
 
 }
 
 .navbar ul li a:hover,
 .active{
 
-color:#d89a27;
-border-bottom:3px solid #d89a27;
+color:#c79a32;
+border-bottom:3px solid #c79a32;
 
 }
 
@@ -92,18 +82,18 @@ overflow:hidden;
 
 .search-box input{
 
-border:none;
-outline:none;
 padding:8px;
 width:160px;
+border:none;
+outline:none;
 
 }
 
 .search-box button{
 
-border:none;
 background:#002b5b;
 color:white;
+border:none;
 padding:8px 12px;
 cursor:pointer;
 
@@ -120,7 +110,7 @@ text-decoration:none;
 
 .icons a:hover{
 
-color:#d89a27;
+color:#c79a32;
 
 }
 
@@ -128,43 +118,38 @@ color:#d89a27;
 
 .hero{
 
-background:#0b2d5a;
-padding:40px;
-
-}
-
-.overlay{
-
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:40px;
+background:#eef4fb;
 
 }
 
 .hero-text{
 
 width:40%;
-color:white;
 
 }
 
 .hero-text h5{
 
-color:#d89a27;
+color:#c79a32;
 margin-bottom:15px;
 
 }
 
 .hero-text h1{
 
-font-size:55px;
+font-size:52px;
+color:#002b5b;
 margin-bottom:15px;
 
 }
 
 .hero-text span{
 
-color:#d89a27;
+color:#c79a32;
 
 }
 
@@ -172,15 +157,32 @@ color:#d89a27;
 
 width:70px;
 height:4px;
-background:#d89a27;
+background:#c79a32;
 margin:20px 0;
 
 }
 
 .hero-text p{
 
-line-height:30px;
 font-size:17px;
+line-height:28px;
+margin-bottom:25px;
+
+}
+
+.quote-btn{
+
+background:#002b5b;
+color:white;
+padding:14px 28px;
+text-decoration:none;
+border-radius:5px;
+
+}
+
+.quote-btn:hover{
+
+background:#c79a32;
 
 }
 
@@ -209,7 +211,7 @@ background:white;
 
 .title h2{
 
-font-size:40px;
+font-size:38px;
 color:#002b5b;
 margin-bottom:10px;
 
@@ -217,8 +219,8 @@ margin-bottom:10px;
 
 .title p{
 
-font-size:18px;
 color:#666;
+font-size:18px;
 
 }
 /* ================= PRODUCTS ================= */
@@ -226,21 +228,21 @@ color:#666;
 .products{
 
 display:flex;
-justify-content:space-between;
+justify-content:center;
 flex-wrap:wrap;
+gap:20px;
 padding:40px;
-gap:25px;
 
 }
 
 .product-card{
 
 background:white;
-width:23%;
-border-radius:10px;
+width:30%;
+border-radius:8px;
 overflow:hidden;
 box-shadow:0 0 10px rgba(0,0,0,0.15);
-transition:0.3s;
+transition:.3s;
 
 }
 
@@ -267,14 +269,13 @@ padding:20px;
 .content h3{
 
 color:#002b5b;
-margin-bottom:15px;
-font-size:22px;
+margin-bottom:12px;
 
 }
 
 .content p{
 
-line-height:26px;
+line-height:25px;
 color:#555;
 margin-bottom:20px;
 
@@ -282,18 +283,18 @@ margin-bottom:20px;
 
 .content a{
 
-display:inline-block;
 background:#002b5b;
 color:white;
 text-decoration:none;
 padding:10px 18px;
 border-radius:5px;
+display:inline-block;
 
 }
 
 .content a:hover{
 
-background:#d89a27;
+background:#c79a32;
 
 }
 
@@ -303,24 +304,25 @@ background:#d89a27;
 
 display:flex;
 justify-content:space-around;
+flex-wrap:wrap;
 background:white;
-padding:35px;
-margin:30px 40px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+padding:30px;
+margin:40px;
+border-radius:8px;
+box-shadow:0 0 8px rgba(0,0,0,0.1);
 
 }
 
 .feature{
 
-width:22%;
+width:18%;
 text-align:center;
 
 }
 
 .feature i{
 
-font-size:40px;
+font-size:38px;
 color:#002b5b;
 margin-bottom:15px;
 
@@ -335,57 +337,68 @@ margin-bottom:10px;
 
 .feature p{
 
-line-height:24px;
-color:#555;
+font-size:15px;
+line-height:22px;
+color:#666;
 
 }
-/* ================= GET A QUOTE ================= */
+/* ================= CONTACT SECTION ================= */
 
-.quote-section{
+.contact-banner{
 
 background:#002b5b;
 color:white;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:45px 70px;
+padding:40px 60px;
 margin-top:50px;
 
 }
 
-.quote-text{
+.contact-left{
 
+display:flex;
+align-items:center;
 width:70%;
 
 }
 
-.quote-text h2{
+.contact-left i{
 
-font-size:34px;
-margin-bottom:15px;
-
-}
-
-.quote-text p{
-
-font-size:18px;
-line-height:30px;
+font-size:55px;
+margin-right:20px;
+color:#d9a441;
 
 }
 
-.quote-btn a{
+.contact-left h2{
 
-background:#d89a27;
-padding:15px 35px;
-text-decoration:none;
+margin-bottom:10px;
+font-size:30px;
+
+}
+
+.contact-left p{
+
+line-height:28px;
+font-size:17px;
+
+}
+
+.contact-right a{
+
+background:#d9a441;
 color:white;
-font-weight:bold;
+text-decoration:none;
+padding:15px 35px;
 border-radius:6px;
-transition:.3s;
+font-weight:bold;
+transition:0.3s;
 
 }
 
-.quote-btn a:hover{
+.contact-right a:hover{
 
 background:white;
 color:#002b5b;
@@ -463,8 +476,9 @@ padding:15px;
 
 .copyright{
 
-background:#000d21;
+background:#000d22;
 text-align:center;
 padding:18px;
+font-size:15px;
 
 }

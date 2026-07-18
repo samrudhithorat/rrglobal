@@ -20,6 +20,7 @@ body{
     align-items:center;
     padding:15px 40px;
     box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    height: 80px;
 }
 
 .logo{
@@ -28,19 +29,12 @@ body{
 }
 
 .logo img{
-    width:65px;
-    margin-right:10px;
+    width:180px;
+    height:auto;
+
 }
 
-.logo h2{
-    color:#002b5b;
-    font-size:30px;
-}
 
-.logo p{
-    color:#b8860b;
-    font-size:12px;
-}
 
 .navbar ul{
     display:flex;
@@ -431,9 +425,9 @@ padding:50px;
 
 }
 
-.footer-about{
+.footer-about p {
 
-width:35%;
+padding-top: 25px;
 
 }
 

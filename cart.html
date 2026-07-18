@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Shopping Cart | RR Global Nexus</title>
+
+    <link rel="stylesheet" href="cart.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+
+<img src="logo.png">
+
+
+
+</div>
+
+<ul>
+
+<li><a href="rr.html">Home</a></li>
+
+<li><a href="about.html">About Us</a></li>
+
+<li><a href="export.html">Export Products</a></li>
+
+<li><a href="import.html">Import Products</a></li>
+
+<li><a href="services.html">Services</a></li>
+
+<li><a href="cyber.html">Cyber Security</a></li>
+
+<li><a href="contact.html">Contact Us</a></li>
+
+</ul>
+
+<div class="icons">
+
+<div class="search-box">
+
+<input type="text" id="searchInput" placeholder="Search">
+
+<button onclick="searchItem()">
+
+<i class="fa-solid fa-search"></i>
+
+</button>
+
+</div>
+
+<a href="cart.html" class="active-icon">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+</a>
+
+<a href="login.html">
+
+<i class="fa-solid fa-user"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="cart-hero">
+
+<div class="hero-text">
+
+<h5>SHOPPING CART</h5>
+
+<h1>Your Cart</h1>
+
+<div class="line"></div>
+
+<p>
+
+Review your selected products before
+proceeding to checkout.
+
+</p>
+
+</div>
+
+<div class="hero-image">
+
+<img src="images/cart-banner.png">
+
+</div>
+
+</section>
+
+<!-- ================= PAGE TITLE ================= -->
+
+<section class="cart-title">
+
+<h2>Your Cart (3 Items)</h2>
+
+<p>
+
+Manage your products and update the quantities below.
+
+</p>
+
+</section>
+<!-- ================= CART SECTION ================= -->
+
+<section class="cart-section">
+
+<div class="cart-table">
+
+<table>
+
+<tr>
+
+<th>Product</th>
+<th>Price</th>
+<th>Quantity</th>
+<th>Total</th>
+<th>Remove</th>
+
+</tr>
+
+<!-- Product 1 -->
+
+<tr>
+
+<td>
+
+<div class="product">
+
+<img src="images/jaggery.jpg">
+
+<div>
+
+<h3>Jaggery Products</h3>
+
+<p>Premium Quality Jaggery</p>
+
+</div>
+
+</div>
+
+</td>
+
+<td>₹120/kg</td>
+
+<td>
+
+<input type="number" value="10" min="1">
+
+</td>
+
+<td>₹1,200</td>
+
+<td>
+
+<i class="fa-solid fa-trash delete"></i>
+
+</td>
+
+</tr>
+
+<!-- Product 2 -->
+
+<tr>
+
+<td>
+
+<div class="product">
+
+<img src="images/spring.jpg">
+
+<div>
+
+<h3>Metal Springs</h3>
+
+<p>Industrial Grade Springs</p>
+
+</div>
+
+</div>
+
+</td>
+
+<td>₹50/Piece</td>
+
+<td>
+
+<input type="number" value="20" min="1">
+
+</td>
+
+<td>₹1,000</td>
+
+<td>
+
+<i class="fa-solid fa-trash delete"></i>
+
+</td>
+
+</tr>
+
+<!-- Product 3 -->
+
+<tr>
+
+<td>
+
+<div class="product">
+
+<img src="images/turmeric.jpg">
+
+<div>
+
+<h3>Turmeric</h3>
+
+<p>Natural Organic Turmeric</p>
+
+</div>
+
+</div>
+
+</td>
+
+<td>₹80/kg</td>
+
+<td>
+
+<input type="number" value="15" min="1">
+
+</td>
+
+<td>₹1,200</td>
+
+<td>
+
+<i class="fa-solid fa-trash delete"></i>
+
+</td>
+
+</tr>
+
+</table>
+
+<div class="buttons">
+
+<a href="export.html" class="btn1">
+
+← Continue Shopping
+
+</a>
+
+<a href="#" class="btn2">
+
+Update Cart
+
+</a>
+
+</div>
+
+</div>
+
+<!-- ================= ORDER SUMMARY ================= -->
+
+<div class="summary">
+
+<h2>Order Summary</h2>
+
+<div class="row">
+
+<span>Subtotal</span>
+
+<span>₹3,400</span>
+
+</div>
+
+<div class="row">
+
+<span>Shipping</span>
+
+<span>₹300</span>
+
+</div>
+
+<div class="row">
+
+<span>GST (18%)</span>
+
+<span>₹666</span>
+
+</div>
+
+<hr>
+
+<div class="row total">
+
+<span>Total</span>
+
+<span>₹4,366</span>
+
+</div>
+
+<a href="#" class="checkout">
+
+Proceed To Checkout →
+
+</a>
+
+<div class="features">
+
+<p><i class="fa-solid fa-shield-halved"></i> Secure Checkout</p>
+
+<p><i class="fa-solid fa-truck-fast"></i> Worldwide Shipping</p>
+
+<p><i class="fa-solid fa-credit-card"></i> Secure Payment</p>
+
+<p><i class="fa-solid fa-headset"></i> Customer Support</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= HELP SECTION ================= -->
+
+<section class="help-section">
+
+<div class="help-left">
+
+<i class="fa-solid fa-headset"></i>
+
+<div>
+
+<h2>Need Help With Your Order?</h2>
+
+<p>
+
+Our team is available to assist you with product
+selection, shipping details and export-import queries.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="help-right">
+
+<a href="contact.html">Contact Us →</a>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footer-container">
+
+<div class="footer-about">
+
+<div class="logo">
+
+<img src="logo.png">
+
+</div>
+
+<p>
+
+Connecting Markets. Creating Opportunities.<br>
+
+Quality products, reliable imports, trusted exports<br>
+and professional business solutions.
+
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<h3>Quick Links</h3>
+
+<a href="rr.html">Home</a>
+
+<a href="about.html">About Us</a>
+
+<a href="export.html">Export Products</a>
+
+<a href="import.html">Import Products</a>
+
+<a href="services.html">Services</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+<div class="footer-contact">
+
+<h3>Contact</h3>
+
+<p>📍 Mumbai, India</p>
+
+<p>📞 +91 9876543210</p>
+
+<p>✉ info@rrglobal.com</p>
+
+</div>
+
+</div>
+
+<div class="bottom-footer">
+
+<p>
+
+© 2026 RR Global Nexus. All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
