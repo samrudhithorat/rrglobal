@@ -1,0 +1,312 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/*================ HEADER ================*/
+
+.top-header{
+    background:#f8f9fa;
+  color:#002b5b;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 40px;
+    height:80px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width: 180px;
+    height: auto;         
+    margin-right:10px;
+}
+
+
+.icons{
+    display:flex;
+    align-items:center;
+}
+
+.icons i{
+    color:#002b5b;
+    font-size:22px;
+    margin-left:20px;
+    cursor:pointer;
+}
+
+.icons a{
+    color:white;
+    text-decoration:none;
+    position:relative;
+}
+
+#cartCount{
+    position:absolute;
+    top:-8px;
+    right:-10px;
+    background:orange;
+    color:white;
+    border-radius:50%;
+    font-size:12px;
+    padding:2px 6px;
+}
+
+/*================ NAVBAR ================*/
+
+nav{
+    background:#0a234f;
+    border-top:1px solid gray;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+}
+
+nav ul li{
+    margin:15px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+}
+
+nav ul li a:hover{
+    color:orange;
+}
+
+.active{
+    color:orange;
+    border-bottom:2px solid orange;
+    padding-bottom:5px;
+}
+
+/*================ SEARCH ================*/
+
+#searchBox{
+    display:none;
+    text-align:center;
+    padding:20px;
+    background:#f6f6f7;
+}
+
+#searchBox input{
+    width:350px;
+    padding:10px;
+    border:1px solid gray;
+}
+
+#searchBox button{
+    padding:10px 20px;
+    background:#0a234f;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+/*================ MAIN ================*/
+
+.main{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    gap:25px;
+}
+
+/*================ LEFT SIDE ================*/
+
+.left{
+    width:65%;
+    background:white;
+    padding:20px;
+    border-radius:8px;
+}
+
+.main-image{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.left h1{
+    margin-top:20px;
+    color:#0a234f;
+}
+
+.left h3{
+    color:orange;
+    margin-top:20px;
+}
+
+.left p{
+    margin-top:10px;
+    line-height:28px;
+    color:#444;
+}
+
+.left h2{
+    margin-top:10px;
+}
+
+/*================ BUTTONS ================*/
+
+.buttons{
+    margin-top:30px;
+}
+
+.cart-btn{
+    background:#f5a623;
+    color:white;
+    border:none;
+    padding:12px 30px;
+    cursor:pointer;
+    margin-right:10px;
+    font-size:16px;
+}
+
+.wish-btn{
+    background:white;
+    border:1px solid gray;
+    padding:12px 30px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+/*================ RIGHT SIDE ================*/
+
+.right{
+    width:33%;
+    background:white;
+    padding:20px;
+    border-radius:8px;
+}
+
+.right h2{
+    margin-bottom:15px;
+}
+
+.category{
+    margin-bottom:20px;
+}
+
+.category button{
+    padding:8px 15px;
+    margin:5px;
+    border:1px solid lightgray;
+    background:white;
+    cursor:pointer;
+    border-radius:20px;
+}
+
+.category button:hover{
+    background:orange;
+    color:white;
+}
+
+/*================ PRODUCTS ================*/
+
+.product{
+    display:flex;
+    align-items:center;
+    margin-bottom:20px;
+    border:1px solid #ddd;
+    padding:10px;
+    border-radius:8px;
+}
+
+.product img{
+    width:100px;
+    height:80px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+.product div{
+    margin-left:10px;
+}
+
+.product h3{
+    font-size:17px;
+}
+
+.product p{
+    font-size:13px;
+    margin-top:5px;
+}
+
+.product button{
+    margin-left:auto;
+    background:white;
+    border:1px solid orange;
+    color:orange;
+    padding:8px 12px;
+    cursor:pointer;
+}
+
+.product button:hover{
+    background:orange;
+    color:white;
+}
+
+/*================ FOOTER ================*/
+
+footer{
+    margin-top:50px;
+    background:#0a234f;
+    color:white;
+}
+
+.footer{
+    display:flex;
+    justify-content:space-between;
+    padding:40px;
+    flex-wrap:wrap;
+}
+
+.footer div{
+    width:18%;
+}
+
+.footer-logo{
+    width:70px;
+    margin-bottom:10px;
+}
+
+.footer h3{
+    color:orange;
+    margin-bottom:15px;
+}
+
+.footer p{
+    margin-top:8px;
+    font-size:14px;
+    line-height:22px;
+}
+
+.copy{
+    text-align:center;
+    border-top:1px solid gray;
+    padding:15px;
+    font-size:14px;
+}
+
+/*================ SCROLL ================*/
+
+html{
+    scroll-behavior:smooth;
+}

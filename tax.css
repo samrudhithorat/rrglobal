@@ -1,0 +1,385 @@
+/* ==========================
+   GENERAL
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+header{
+    background:white;
+    box-shadow:0 2px 5px lightgray;
+    
+}
+
+.navbar{
+    width:95%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 0;
+    height: 80px;
+}
+
+.logo img{
+    width:180px;
+    height: auto;
+}
+
+.navbar ul{
+    list-style:none;
+    display:flex;
+}
+
+.navbar ul li{
+    margin:0 15px;
+}
+
+.navbar ul li a{
+    text-decoration:none;
+    color:#0b2d63;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.navbar ul li a:hover{
+    color:#d89b2b;
+}
+
+.nav-icons{
+    display:flex;
+    align-items:center;
+}
+
+.nav-icons a{
+    color:#0b2d63;
+    text-decoration:none;
+}
+
+.nav-icons i{
+    font-size:20px;
+    margin-left:20px;
+    cursor:pointer;
+}
+
+#cartCount{
+    background:#d89b2b;
+    color:white;
+    border-radius:50%;
+    padding:2px 6px;
+    font-size:11px;
+    position:relative;
+    top:-10px;
+    left:-8px;
+}
+
+/* ==========================
+   SEARCH
+========================== */
+
+#searchBox{
+    display:none;
+    background:white;
+    text-align:center;
+    padding:20px;
+}
+
+#searchBox input{
+    width:350px;
+    padding:10px;
+    border:1px solid gray;
+}
+
+#searchBox button{
+    background:#0b2d63;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+    width:95%;
+    margin:20px auto;
+    display:flex;
+    background:#0b2d63;
+    color:white;
+}
+
+.hero-text{
+    width:40%;
+    padding:40px;
+}
+
+.hero-text h5{
+    color:#d89b2b;
+    margin-bottom:15px;
+}
+
+.hero-text h1{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    line-height:28px;
+}
+
+.hero-image{
+    width:60%;
+}
+
+.hero-image img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+/* ==========================
+   ABOUT
+========================== */
+
+.about{
+    width:95%;
+    margin:40px auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.about-text{
+    width:48%;
+}
+
+.about-text h2{
+    color:#0b2d63;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    line-height:28px;
+    color:#555;
+    margin-bottom:15px;
+}
+
+.about-image{
+    width:48%;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:8px;
+}
+
+/* ==========================
+   SERVICES
+========================== */
+
+.services{
+    width:95%;
+    margin:50px auto;
+    text-align:center;
+}
+
+.services h2{
+    color:#0b2d63;
+    margin-bottom:30px;
+}
+
+.cards{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:15.5%;
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 8px lightgray;
+}
+
+.card i{
+    font-size:38px;
+    color:#0b2d63;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#0b2d63;
+    font-size:16px;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:14px;
+    color:#555;
+    line-height:22px;
+}
+
+/* ==========================
+   WHY
+========================== */
+
+.why{
+    width:95%;
+    margin:50px auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#0b2d63;
+    color:white;
+    padding:30px;
+}
+
+.left{
+    width:40%;
+}
+
+.left h2{
+    margin-bottom:20px;
+}
+
+.left li{
+    margin-bottom:15px;
+    list-style:none;
+}
+
+.right{
+    width:55%;
+}
+
+.right img{
+    width:100%;
+    border-radius:8px;
+}
+
+/* ==========================
+   INDUSTRY
+========================== */
+
+.industry{
+    width:95%;
+    margin:50px auto;
+    text-align:center;
+}
+
+.industry h2{
+    color:#0b2d63;
+    margin-bottom:30px;
+}
+
+.industry-box{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.box{
+    width:11%;
+    background:white;
+    padding:15px;
+    border-radius:8px;
+    box-shadow:0 0 8px lightgray;
+}
+
+.box i{
+    font-size:30px;
+    color:#0b2d63;
+    margin-bottom:10px;
+}
+
+/* ==========================
+   CTA
+========================== */
+
+.cta{
+    width:95%;
+    margin:auto;
+    background:#0b2d63;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px;
+}
+
+.cta button{
+    background:white;
+    color:#0b2d63;
+    border:none;
+    padding:12px 25px;
+    cursor:pointer;
+}
+
+.cta button:hover{
+    background:#d89b2b;
+    color:white;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    
+    background:#0b2d63;
+    margin-top:30px;
+    border-top:3px solid #0b2d63;
+}
+
+.footer{
+    width:95%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    padding:40px 0;
+    flex-wrap:wrap;
+}
+
+.footer div{
+    width:22%;
+}
+
+.footer img{
+    width:180px;
+    margin-bottom:15px;
+}
+
+.footer h3{
+    color:#fcfcfd;
+    margin-bottom:15px;
+}
+
+.footer p{
+    margin-bottom:8px;
+    color:#faf8f8;
+}
+
+.copy{
+    text-align:center;
+    border-top:1px solid lightgray;
+    padding:15px;
+    font-size:14px;
+}

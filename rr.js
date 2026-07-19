@@ -31,3 +31,8 @@ alert("No Result Found");
 }
 
 }
+function closeVideo(){
+
+    document.getElementById("videoPopup").style.display="none";
+
+}
