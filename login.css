@@ -1,329 +1,520 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
-}
+/* ===========================
+   GENERAL
+=========================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
 body{
-background:#fff;
+    background:#f4f4f4;
 }
 
+/* ===========================
+   TOP HEADER
+=========================== */
 
-
-/* HEADER */
-
-.top{
-
-height:85px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:10px 30px;
-
+.top-header{
+    background:#f8f9fa;
+    color:#0b2d63;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 50px;
+    height:90px;
 }
-
-
-.logo{
-display:flex;
-align-items:center;
-}
-
 
 .logo img{
-width:180px;
-height:auto;
+    width:180px;
+    height:auto;
 }
 
-
-
-.contact span{
-
-margin-left:25px;
-font-size:13px;
-
+.top-info{
+    display:flex;
+    gap:25px;
 }
 
+.top-info p{
+    font-size:14px;
+}
 
-
-
-/* NAVBAR */
-
+/* ===========================
+   NAVBAR
+=========================== */
 
 nav{
-
-background:#002b5c;
-padding:15px;
-
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
-
 
 nav ul{
-
-display:flex;
-justify-content:center;
-gap:30px;
-list-style:none;
-
+    list-style:none;
+    display:flex;
 }
 
-
-
-nav a,nav i{
-
-color:white;
-text-decoration:none;
-font-size:14px;
-
+nav ul li{
+    margin-right:25px;
 }
 
-
-nav button{
-
-background:none;
-border:none;
-color:white;
-
+nav ul li a{
+    text-decoration:none;
+    color:#0b2d63;
+    font-weight:bold;
 }
 
-
-.count{
-
-background:#c99432;
-border-radius:50%;
-padding:3px 6px;
-font-size:10px;
-
+nav ul li a:hover{
+    color:#d89b2b;
 }
 
-
-
-
-/* SEARCH */
-
-
-#search{
-
-display:none;
-text-align:center;
-padding:15px;
-
+.nav-icons{
+    display:flex;
+    align-items:center;
 }
 
-
-#search input{
-
-width:400px;
-padding:10px;
-
+.nav-icons input{
+    padding:8px;
+    border:1px solid #ccc;
+    border-radius:5px;
 }
 
+.nav-icons button{
+    background:#0b2d63;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    cursor:pointer;
+    margin-right:15px;
+}
 
+.nav-icons a{
+    color:#0b2d63;
+    text-decoration:none;
+    font-size:20px;
+    margin-left:15px;
+    position:relative;
+}
 
+#cartCount{
+    position:absolute;
+    top:-8px;
+    right:-10px;
+    background:red;
+    color:white;
+    border-radius:50%;
+    font-size:11px;
+    padding:2px 6px;
+}
 
-
-/* LOGIN */
-
+/* ===========================
+   LOGIN SECTION
+=========================== */
 
 .login-section{
-
-width:90%;
-margin:30px auto;
-
-background:#eef6ff;
-
-border-radius:30px;
-
-display:flex;
-padding:40px;
-
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
 }
-
-
-
-.left{
-
-width:50%;
-padding:40px;
-
-}
-
-
-
-.left h1{
-
-font-size:35px;
-
-}
-
-
-.left span{
-
-color:#c08b28;
-
-}
-
-
-.left img{
-
-width:400px;
-
-}
-
-
-
-
 
 .login-box{
-
-background:white;
-padding:35px;
-
-width:600px;
-height:600px;
-
-border-radius:25px;
-
-box-shadow:0 0 20px #ccc;
-
+    width:420px;
+    background:white;
+    padding:35px;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,0,0,0.15);
 }
-
-
 
 .login-box h1{
-
-text-align:center;
-color:#07336b;
-
+    text-align:center;
+    color:#0b2d63;
+    margin-bottom:10px;
 }
+
 .login-box p{
-    padding-top:10px;
-    padding-bottom:10px;
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
 }
 
 .login-box label{
-    padding-top:15px;
+    font-weight:bold;
+    display:block;
+    margin-top:15px;
 }
 
-
-.login-box input{
-
-width:100%;
-padding:12px;
-margin:10px 0;
-
-border:1px solid #ddd;
-
+.input-box{
+    position:relative;
+    margin-top:8px;
 }
 
+.input-box input{
+    width:100%;
+    padding:12px 40px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    outline:none;
+}
 
+.input-box i:first-child{
+    position:absolute;
+    left:12px;
+    top:14px;
+    color:#666;
+}
+
+#eye{
+    position:absolute;
+    right:12px;
+    top:14px;
+    cursor:pointer;
+    color:#666;
+}
 
 .remember{
-
-font-size:13px;
-padding-bottom:10px;
-
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:18px;
 }
-
 
 .remember a{
-
-float:right;
-
+    text-decoration:none;
+    color:#0b2d63;
 }
-
-
 
 .login-btn{
+    width:100%;
+    background:#0b2d63;
+    color:white;
+    border:none;
+    padding:12px;
+    margin-top:20px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
 
-width:100%;
-background:#073b82;
-color:white;
-border:0;
-padding-top:12px;
-padding-bottom:12px;
+.login-btn:hover{
+    background:#d89b2b;
+}
+/* ===========================
+   OR LINE
+=========================== */
+
+.or-line{
+    display:flex;
+    align-items:center;
+    margin:25px 0;
+}
+
+.or-line hr{
+    flex:1;
+    border:none;
+    border-top:1px solid #ccc;
+}
+
+.or-line span{
+    margin:0 10px;
+    color:#666;
+    font-size:14px;
+}
+
+/* ===========================
+   GOOGLE & APPLE BUTTONS
+=========================== */
+
+.social-login{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.google-btn,
+.apple-btn{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    color:#333;
+
+    background:white;
+
+    transition:0.3s;
+}
+
+.google-btn:hover{
+
+    background:#f5f5f5;
 
 }
-.or{
-    padding-top:10px;
+
+.apple-btn:hover{
+
+    background:black;
+
+    color:white;
+
+}
+
+.google-btn img,
+.apple-btn img{
+
+    width:24px;
+
+    margin-right:12px;
+
+}
+
+/* ===========================
+   REGISTER
+=========================== */
+
+.register{
+
+    margin-top:30px;
+
     text-align:center;
-    padding-bottom:10px;
-}
-
-
-
-.google{
-
-width:100%;
-background:white;
-border:1px solid #ccc;
-padding-top:12px;
-padding-bottom:12px;
 
 }
 
+.register p{
 
+    margin-bottom:15px;
 
+    color:#666;
 
+}
 
-/* FOOTER */
+.user-btn,
+.admin-btn{
 
+    display:block;
+
+    text-decoration:none;
+
+    padding:12px;
+
+    margin-top:12px;
+
+    border-radius:6px;
+
+    color:white;
+
+    font-weight:bold;
+
+}
+
+.user-btn{
+
+    background:#0b2d63;
+
+}
+
+.user-btn:hover{
+
+    background:#d89b2b;
+
+}
+
+.admin-btn{
+
+    background:#444;
+
+}
+
+.admin-btn:hover{
+
+    background:#000;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
 
 footer{
 
-background:#002b5c;
-color:white;
+    background:#0b2d63;
 
-padding:35px;
+    margin-top:60px;
 
 }
 
+.footer{
 
+    width:90%;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    flex-wrap:wrap;
+
+    padding:50px 0;
+
+}
 
 .footer-box{
 
-display:flex;
-justify-content:space-between;
+    width:22%;
 
 }
 
+.footer-box img{
+
+    width:180px;
+
+    margin-bottom:15px;
+
+}
 
 .footer-box h3{
 
-color:#d49b32;
+    color:white;
+
+    margin-bottom:20px;
 
 }
 
+.footer-box p,
+.footer-box a{
 
-.footer-box p{
+    color:white;
 
-font-size:13px;
-margin:8px 0;
+    text-decoration:none;
 
-}
+    display:block;
 
+    margin-bottom:10px;
 
-.flogo{
-
-width:120px;
-
-}
-
-
-.bottom{
-
-margin-top:30px;
-border-top:1px solid white;
-padding-top:15px;
-
-font-size:13px;
+    line-height:24px;
 
 }
 
+.footer-box a:hover{
 
-.bottom span{
+    color:#d89b2b;
 
-float:right;
+}
+
+.footer-box i{
+
+    margin-right:10px;
+
+}
+
+.copyright{
+
+    text-align:center;
+
+    color:white;
+
+    padding:18px;
+
+    border-top:1px solid rgba(255,255,255,0.2);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+.top-header{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.top-info{
+
+    flex-direction:column;
+
+    gap:8px;
+
+    margin-top:10px;
+
+}
+
+nav{
+
+    flex-direction:column;
+
+}
+
+nav ul{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    margin-bottom:15px;
+
+}
+
+nav ul li{
+
+    margin:10px 0;
+
+}
+
+.nav-icons{
+
+    margin-top:10px;
+
+}
+
+.footer-box{
+
+    width:48%;
+
+    margin-bottom:30px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.login-box{
+
+    width:95%;
+
+}
+
+.footer-box{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.logo img{
+
+    width:140px;
+
+}
 
 }

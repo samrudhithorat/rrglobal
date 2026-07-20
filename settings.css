@@ -1,0 +1,267 @@
+/* ==========================
+   GENERAL
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+}
+
+.container{
+    display:flex;
+}
+
+/* ==========================
+   SIDEBAR
+========================== */
+
+.sidebar{
+    width:260px;
+    min-height:100vh;
+    background:#0b2d63;
+    color:white;
+    padding:20px;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.logo img{
+    width:70px;
+    margin-bottom:10px;
+}
+
+.logo h2{
+    font-size:24px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin:12px 0;
+}
+
+.sidebar ul li a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.sidebar ul li a:hover{
+    background:white;
+    color:#0b2d63;
+}
+
+.sidebar ul li a i{
+    width:25px;
+}
+
+.active a{
+    background:white;
+    color:#0b2d63 !important;
+}
+
+/* ==========================
+   QUICK SUMMARY
+========================== */
+
+.summary{
+    margin-top:40px;
+    background:white;
+    color:black;
+    padding:15px;
+    border-radius:10px;
+}
+
+.summary h3{
+    color:#0b2d63;
+    margin-bottom:15px;
+}
+
+.summary p{
+    display:flex;
+    justify-content:space-between;
+    margin:10px 0;
+}
+
+.summary span{
+    color:#0b2d63;
+    font-weight:bold;
+}
+
+/* ==========================
+   MAIN
+========================== */
+
+.main{
+    flex:1;
+    padding:30px;
+}
+
+/* ==========================
+   TOPBAR
+========================== */
+
+.topbar{
+    margin-bottom:25px;
+}
+
+.topbar h1{
+    color:#0b2d63;
+    margin-bottom:5px;
+}
+
+.topbar p{
+    color:gray;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.08);
+    margin-bottom:25px;
+}
+
+.card h2{
+    color:#0b2d63;
+    margin-bottom:20px;
+}
+
+/* ==========================
+   FORM
+========================== */
+
+.row{
+    display:flex;
+    gap:20px;
+    margin-bottom:20px;
+}
+
+.input-box{
+    flex:1;
+}
+
+.input-box label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+.input-box input,
+.input-box textarea{
+
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    outline:none;
+}
+
+.input-box input:focus,
+.input-box textarea:focus{
+
+    border:1px solid #0b2d63;
+}
+
+textarea{
+    resize:none;
+}
+
+/* ==========================
+   CHECKBOX
+========================== */
+
+.check-box{
+
+    margin:15px 0;
+    font-size:16px;
+}
+
+.check-box input{
+
+    margin-right:10px;
+    transform:scale(1.2);
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.save{
+
+    background:#0b2d63;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.save:hover{
+
+    background:#17448e;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    background:#0b2d63;
+    color:white;
+    text-align:center;
+    padding:18px;
+    border-radius:10px;
+    margin-top:30px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+
+.container{
+    flex-direction:column;
+}
+
+.sidebar{
+    width:100%;
+}
+
+.row{
+    flex-direction:column;
+}
+
+}
+
+@media(max-width:600px){
+
+.main{
+    padding:15px;
+}
+
+.save{
+    width:100%;
+}
+
+}

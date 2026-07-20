@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RR Global Dashboard</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+<img src="logo.png">
+
+<h2>RR Global</h2>
+
+</div>
+
+<ul>
+
+<li class="active">
+<a href="dashboard.html">
+<i class="fa-solid fa-house"></i>
+Dashboard
+</a>
+</li>
+
+<li>
+<a href="products.html">
+<i class="fa-solid fa-box"></i>
+All Products
+</a>
+</li>
+
+<li>
+<a href="orders.html">
+<i class="fa-solid fa-cart-shopping"></i>
+Orders
+</a>
+</li>
+
+
+<li>
+<a href="settings.html">
+<i class="fa-solid fa-gear"></i>
+Settings
+</a>
+</li>
+
+</ul>
+
+<!-- Quick Summary -->
+
+<div class="summary">
+
+<h3>Quick Summary</h3>
+
+<p>Total Products <span id="totalProduct">0</span></p>
+
+<p>Export Products <span id="exportCount">0</span></p>
+
+<p>Import Products <span id="importCount">0</span></p>
+
+<p>Total Orders <span>236</span></p>
+
+<p>Total Enquiries <span>52</span></p>
+
+</div>
+
+</div>
+
+<!-- ================= MAIN ================= -->
+
+<div class="main">
+
+<!-- ================= TOP BAR ================= -->
+
+<div class="topbar">
+
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Search anything...">
+
+</div>
+
+<div class="top-icons">
+
+<div class="icon">
+
+<i class="fa-regular fa-bell"></i>
+
+<span>5</span>
+
+</div>
+
+<div class="icon">
+
+<i class="fa-regular fa-envelope"></i>
+
+<span>3</span>
+
+</div>
+
+<div class="admin">
+
+<img src="images/admin.png">
+
+<div>
+
+<h3>Admin User</h3>
+
+<p>Super Admin</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= PAGE TITLE ================= -->
+
+<div class="heading">
+
+<h1>Dashboard</h1>
+
+<p>Welcome back Admin! Here's what's happening today.</p>
+
+</div>
+
+<!-- ================= STATISTICS ================= -->
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-box"></i>
+
+<div>
+
+<h4>Total Products</h4>
+
+<h2 id="cardProducts">0</h2>
+
+<p>+12 this week</p>
+
+</div>
+
+</div>
+
+<div class="card green">
+
+<i class="fa-solid fa-arrow-up-right-dots"></i>
+
+<div>
+
+<h4>Export Products</h4>
+
+<h2 id="cardExport">0</h2>
+
+<p>+8 this week</p>
+
+</div>
+
+</div>
+
+<div class="card orange">
+
+<i class="fa-solid fa-download"></i>
+
+<div>
+
+<h4>Import Products</h4>
+
+<h2 id="cardImport">0</h2>
+
+<p>+4 this week</p>
+
+</div>
+
+</div>
+
+<div class="card purple">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<div>
+
+<h4>Total Orders</h4>
+
+<h2>236</h2>
+
+<p>+18 this week</p>
+
+</div>
+
+</div>
+
+<div class="card yellow">
+
+<i class="fa-regular fa-comment"></i>
+
+<div>
+
+<h4>Enquiries</h4>
+
+<h2>52</h2>
+
+<p>+7 this week</p>
+
+</div>
+
+</div>
+
+<div class="card cyan">
+
+<i class="fa-solid fa-users"></i>
+
+<div>
+
+<h4>Users</h4>
+
+<h2>86</h2>
+
+<p>+10 this week</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= CHARTS ================= -->
+
+<div class="charts">
+
+<div class="chart-box">
+
+<div class="title">
+
+<h3>Orders Overview</h3>
+
+</div>
+
+<canvas id="lineChart"></canvas>
+
+</div>
+
+<div class="chart-box small">
+
+<h3>Products By Category</h3>
+
+<canvas id="pieChart"></canvas>
+
+</div>
+
+</div>
+
+<!-- ================= BOTTOM ================= -->
+
+<div class="bottom">
+
+<!-- Recent Orders -->
+
+<div class="table-box">
+
+<div class="table-title">
+
+<h3>Recent Orders</h3>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Order ID</th>
+
+<th>Customer</th>
+
+<th>Type</th>
+
+<th>Amount</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>#ORD2456</td>
+
+<td>Ramesh Traders</td>
+
+<td>Export</td>
+
+<td>₹45,000</td>
+
+<td><span class="success">Completed</span></td>
+
+</tr>
+
+<tr>
+
+<td>#ORD2455</td>
+
+<td>Global Impex</td>
+
+<td>Import</td>
+
+<td>₹78,500</td>
+
+<td><span class="process">Processing</span></td>
+
+</tr>
+
+<tr>
+
+<td>#ORD2454</td>
+
+<td>Maya Exports</td>
+
+<td>Export</td>
+
+<td>₹22,000</td>
+
+<td><span class="ship">Shipped</span></td>
+
+</tr>
+
+<tr>
+
+<td>#ORD2453</td>
+
+<td>Shakti Enterprises</td>
+
+<td>Import</td>
+
+<td>₹36,800</td>
+
+<td><span class="pending">Pending</span></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- Enquiries -->
+
+<div class="enquiry-box">
+
+<h3>Recent Enquiries</h3>
+
+<div class="enquiry">
+
+<h4>Vikram Singh</h4>
+
+<p>Interested in Organic Fertilizers</p>
+
+</div>
+
+<div class="enquiry">
+
+<h4>Anita Deshmukh</h4>
+
+<p>Bulk Order for Turmeric</p>
+
+</div>
+
+<div class="enquiry">
+
+<h4>John Mathew</h4>
+
+<p>Import Electronic Components</p>
+
+</div>
+
+<div class="enquiry">
+
+<h4>Sanjay Patel</h4>
+
+<p>Quotation for Metal Springs</p>
+
+</div>
+
+</div>
+
+<!-- Quick Actions -->
+
+<div class="quick">
+
+<h3>Quick Actions</h3>
+
+<div class="action-grid">
+
+<a href="products.html">
+
+<i class="fa-solid fa-upload"></i>
+
+<p>Add Product</p>
+
+</a>
+
+<a href="#">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<p>Orders</p>
+
+</a>
+
+<a href="#">
+
+<i class="fa-solid fa-users"></i>
+
+<p>Users</p>
+
+</a>
+
+<a href="#">
+
+<i class="fa-solid fa-envelope"></i>
+
+<p>Enquiries</p>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 RR Global Admin Panel | All Rights Reserved.
+
+</footer>
+
+</div>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

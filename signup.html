@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up | RR Global Nexux</title>
 
-    <title>Login | RR Global Nexux</title>
+<link rel="stylesheet" href="signup.css">
 
-    <link rel="stylesheet" href="login.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
@@ -77,33 +74,83 @@
     
 
 </div>
+<!-- SIGNUP SECTION -->
 
+<section class="signup-section">
 
+<div class="signup-box">
 
-<!-- ================= LOGIN SECTION ================= -->
+<div class="icon">
+<i class="fa-regular fa-user"></i>
+</div>
 
-<section class="login-section">
+<h1>Sign Up</h1>
 
-<div class="login-box">
+<p>Create your account to get started.</p>
 
-<h1>Login</h1>
+<form id="signupForm">
 
-<p>Please login to your account to continue.</p>
+<div class="row">
 
-<form action="/login" method="POST">
+<div class="input-group">
+
+<label>Full Name</label>
+
+<div class="input-box">
+
+<i class="fa-regular fa-user"></i>
+
+<input
+type="text"
+id="name"
+placeholder="Enter your full name"
+required>
+
+</div>
+
+</div>
+
+<div class="input-group">
 
 <label>Email Address</label>
 
 <div class="input-box">
 
-<i class="fa-solid fa-envelope"></i>
+<i class="fa-regular fa-envelope"></i>
 
-<input type="email"
-name="email"
+<input
+type="email"
+id="email"
 placeholder="Enter your email address"
 required>
 
 </div>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-group">
+
+<label>Phone Number</label>
+
+<div class="input-box">
+
+<i class="fa-solid fa-phone"></i>
+
+<input
+type="tel"
+id="phone"
+placeholder="Enter your phone number"
+required>
+
+</div>
+
+</div>
+
+<div class="input-group">
 
 <label>Password</label>
 
@@ -114,100 +161,69 @@ required>
 <input
 type="password"
 id="password"
-name="password"
-placeholder="Enter your password"
+placeholder="Create a password"
 required>
-
-<i
-class="fa-solid fa-eye"
-id="eye"
-onclick="showPassword()">
-</i>
 
 </div>
 
-<div class="remember">
+</div>
 
-<label>
+</div>
 
-<input type="checkbox">
+<div class="input-group">
 
-Remember Me
+<label>Confirm Password</label>
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+type="password"
+id="confirmPassword"
+placeholder="Confirm your password"
+required>
+
+</div>
+
+</div>
+
+<div class="checkbox">
+
+<input type="checkbox" id="terms">
+
+<label for="terms">
+
+I agree to the
+<a href="#">Terms & Conditions</a>
+and
+<a href="#">Privacy Policy</a>
 
 </label>
 
-<a href="forgotpassword.html">
-
-Forgot Password?
-
-</a>
-
 </div>
 
-<button class="login-btn">
+<button type="submit" class="signup-btn">
 
-Login
+Sign Up as User
 
 </button>
-<!-- OR Line -->
 
-<div class="or-line">
+<div class="or">
 
-    <hr>
-
-    <span>OR</span>
-
-    <hr>
+<hr>
+<span>OR</span>
+<hr>
 
 </div>
 
-<!-- Google & Apple Login -->
+<p class="login-link">
 
-<div class="social-login">
+Already have an account?
 
-    <!-- Google Login -->
-    <a href="/auth/google" class="google-btn">
+<a href="login.html">Login</a>
 
-        <img src="images/google.png" alt="Google">
-
-        Continue with Google
-
-    </a>
-
-    <!-- Apple Login -->
-    <a href="/auth/apple" class="apple-btn">
-
-        <img src="images/apple.png" alt="Apple">
-
-        Continue with Apple
-
-    </a>
-
-</div>
-
-<!-- Register -->
-
-<div class="register">
-
-    <p>Don't have an account?</p>
-
-    <a href="signup.html" class="user-btn">
-
-        <i class="fa-regular fa-user"></i>
-
-        Sign Up as User
-
-    </a>
-
-    <a href="adminsignup.html" class="admin-btn">
-
-        <i class="fa-solid fa-shield-halved"></i>
-
-        Sign Up as Admin
-
-    </a>
-
-</div>
+</p>
 
 </form>
 
@@ -310,7 +326,7 @@ Login
 
 </footer>
 
-<script src="login.js"></script>
+<script src="signup.js"></script>
 
 </body>
 

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RR Global Admin - Orders</title>
+
+<link rel="stylesheet" href="orders.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+
+<img src="logo.png">
+
+
+
+</div>
+
+<ul>
+
+<li><a href="rr.html">Home</a></li>
+
+<li><a href="about.html">About Us</a></li>
+
+<li><a href="export.html">Export Products</a></li>
+
+<li><a href="import.html">Import Products</a></li>
+
+<li><a href="services.html">Services</a></li>
+
+<li><a href="cyber.html">Cyber Security</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+<div class="icons">
+
+<div class="search-box">
+
+<input type="text" id="searchInput"
+placeholder="Search...">
+
+<button onclick="searchItem()">
+<i class="fa fa-search"></i>
+</button>
+
+</div>
+
+<a href="cart.html">
+<i class="fa-solid fa-cart-shopping"></i>
+</a>
+
+<a href="login.html">
+<i class="fa-solid fa-user"></i>
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+<img src="logo.png">
+
+<h2>RR Global</h2>
+
+</div>
+
+<ul>
+
+<li>
+
+<a href="dashboard.html">
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+<li>
+
+<a href="products.html">
+
+<i class="fa-solid fa-box"></i>
+
+All Products
+
+</a>
+
+</li>
+
+<li class="active">
+
+<a href="orders.html">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Orders
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="settings.html">
+
+<i class="fa-solid fa-gear"></i>
+
+Settings
+
+</a>
+
+</li>
+
+</ul>
+
+<div class="summary">
+
+<h3>Quick Summary</h3>
+
+<p>Total Products <span id="totalProduct">0</span></p>
+
+<p>Export Products <span id="exportCount">0</span></p>
+
+<p>Import Products <span id="importCount">0</span></p>
+
+<p>Total Orders <span id="orderCount">0</span></p>
+
+<p>Total Enquiries <span>52</span></p>
+
+</div>
+
+</div>
+
+<!-- ================= MAIN ================= -->
+
+<div class="main">
+
+<!-- ================= TOP ================= -->
+
+<div class="topbar">
+
+<div>
+
+<h1>Orders</h1>
+
+<p>View and manage all received orders</p>
+
+</div>
+
+<button class="export-btn">
+
+<i class="fa-solid fa-download"></i>
+
+Export Report
+
+</button>
+
+</div>
+
+<!-- ================= FILTER ================= -->
+
+<div class="filter-card">
+
+<select id="filterType">
+
+<option value="All">
+
+All Orders
+
+</option>
+
+<option value="Export">
+
+Export
+
+</option>
+
+<option value="Import">
+
+Import
+
+</option>
+
+</select>
+
+<select id="filterStatus">
+
+<option value="All">
+
+All Status
+
+</option>
+
+<option>
+
+Completed
+
+</option>
+
+<option>
+
+Processing
+
+</option>
+
+<option>
+
+Pending
+
+</option>
+
+<option>
+
+Cancelled
+
+</option>
+
+</select>
+
+<input
+type="date"
+id="fromDate">
+
+<input
+type="date"
+id="toDate">
+
+<input
+type="text"
+id="searchOrder"
+placeholder="Search Order ID, Customer..."
+onkeyup="searchOrders()">
+
+<button onclick="filterOrders()">
+
+Filter
+
+</button>
+
+</div>
+
+<!-- ================= TABLE ================= -->
+
+<div class="table-card">
+
+<table id="ordersTable">
+
+<thead>
+
+<tr>
+
+<th>Order ID</th>
+
+<th>Date</th>
+
+<th>Customer</th>
+
+<th>Type</th>
+
+<th>Products</th>
+
+<th>Amount</th>
+
+<th>Status</th>
+
+<th>Payment</th>
+
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<!-- JavaScript will insert orders -->
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- ================= PAGINATION ================= -->
+
+<div class="pagination">
+
+<button onclick="previousPage()">
+
+<i class="fa-solid fa-angle-left"></i>
+
+Previous
+
+</button>
+
+<span id="pageNumber">
+
+Page 1
+
+</span>
+
+<button onclick="nextPage()">
+
+Next
+
+<i class="fa-solid fa-angle-right"></i>
+
+</button>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footer-container">
+
+<div class="footer-about">
+
+<div class="logo">
+
+<img src="logo.png">
+
+</div>
+
+<p>
+
+Connecting Markets. Creating Opportunities.<br>
+
+Quality products, reliable imports, trusted exports<br>
+and professional business solutions.
+
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<h3>Quick Links</h3>
+
+<a href="rr.html">Home</a>
+
+<a href="about.html">About Us</a>
+
+<a href="export.html">Export Products</a>
+
+<a href="import.html">Import Products</a>
+
+<a href="services.html">Services</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+<div class="footer-contact">
+
+<h3>Contact</h3>
+
+<p>📍 Mumbai, India</p>
+
+<p>📞 +91 9876543210</p>
+
+<p>✉ info@rrglobal.com</p>
+
+</div>
+
+</div>
+
+<div class="bottom-footer">
+
+<p>
+
+© 2026 RR Global Nexus. All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+
+
+<script src="orders.js"></script>
+
+
+</body>
+
+</html>

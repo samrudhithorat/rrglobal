@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RR Global Admin - Products</title>
+
+<link rel="stylesheet" href="products.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+<img src="images/logo.png">
+
+<h2>RR Global</h2>
+
+</div>
+
+<ul>
+
+<li>
+<a href="dashboard.html">
+<i class="fa-solid fa-house"></i>
+Dashboard
+</a>
+</li>
+
+<li class="active">
+<a href="products.html">
+<i class="fa-solid fa-box"></i>
+All Products
+</a>
+</li>
+
+<li>
+<a href="orders.html">
+<i class="fa-solid fa-cart-shopping"></i>
+Orders
+</a>
+</li>
+
+<li>
+<a href="settings.html">
+<i class="fa-solid fa-gear"></i>
+Settings
+</a>
+</li>
+
+</ul>
+
+<div class="summary">
+
+<h3>Quick Summary</h3>
+
+<p>Total Products <span id="totalProduct">0</span></p>
+
+<p>Export Products <span id="exportCount">0</span></p>
+
+<p>Import Products <span id="importCount">0</span></p>
+
+<p>Orders <span>12</span></p>
+
+<p>Enquiries <span>7</span></p>
+
+</div>
+
+</div>
+
+<!-- ================= MAIN ================= -->
+
+<div class="main">
+
+<!-- Header -->
+
+<div class="topbar">
+
+<div>
+
+<h1>Products Management</h1>
+
+<p>Add, Edit & Manage Products</p>
+
+</div>
+
+<div class="admin">
+
+<img src="images/admin.png">
+
+<h3>Admin</h3>
+
+</div>
+
+</div>
+
+<!-- ================= FORM ================= -->
+
+<div class="card">
+
+<h2>Add New Product</h2>
+
+<form id="productForm">
+
+<div class="row">
+
+<div class="input-box">
+
+<label>Product Type</label>
+
+<select id="productType">
+
+<option value="">Select</option>
+
+<option value="Export">Export Product</option>
+
+<option value="Import">Import Product</option>
+
+</select>
+
+</div>
+
+<div class="input-box">
+
+<label>Category</label>
+
+<select id="category">
+
+<option>Select Product Type First</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-box">
+
+<label>Product Name</label>
+
+<input
+type="text"
+id="productName"
+placeholder="Enter Product Name">
+
+</div>
+
+<div class="input-box">
+
+<label>Price</label>
+
+<input
+type="number"
+id="price"
+placeholder="Enter Price">
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-box">
+
+<label>Unit</label>
+
+<input
+type="text"
+id="unit"
+placeholder="Kg / Piece / Box">
+
+</div>
+
+<div class="input-box">
+
+<label>Status</label>
+
+<select id="status">
+
+<option>Active</option>
+
+<option>Inactive</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-box">
+
+<label>Short Description</label>
+
+<textarea
+id="shortDesc"
+rows="4"></textarea>
+
+</div>
+
+<div class="input-box">
+
+<label>Detailed Description</label>
+
+<textarea
+id="longDesc"
+rows="4"></textarea>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-box">
+
+<label>Upload Product Image</label>
+
+<input
+type="file"
+id="productImage"
+accept="image/*">
+
+</div>
+
+<div class="input-box">
+
+<label>Featured Product</label>
+
+<br><br>
+
+<input
+type="checkbox"
+id="featured">
+
+Yes
+
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button
+type="reset"
+class="reset">
+
+Reset
+
+</button>
+
+<button
+type="submit"
+class="save">
+
+Save Product
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+<!-- ================= MANAGE PRODUCTS ================= -->
+
+<div class="card">
+
+    <div class="table-header">
+
+        <h2>Manage Products</h2>
+
+        <div class="table-controls">
+
+            <!-- Search -->
+
+            <input
+            type="text"
+            id="search"
+            placeholder="Search Product..."
+            onkeyup="searchProduct()">
+
+            <!-- Product Type Filter -->
+
+            <select id="filterType" onchange="filterProducts()">
+
+                <option value="All">All Types</option>
+                <option value="Export">Export Product</option>
+                <option value="Import">Import Product</option>
+
+            </select>
+
+            <!-- Category Filter -->
+
+            <select id="filterCategory" onchange="filterProducts()">
+
+                <option value="All">All Categories</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+    <table id="productTable">
+
+        <thead>
+
+            <tr>
+
+                <th>Image</th>
+
+                <th>Product Name</th>
+
+                <th>Type</th>
+
+                <th>Category</th>
+
+                <th>Price</th>
+
+                <th>Unit</th>
+
+                <th>Status</th>
+
+                <th>Featured</th>
+
+                <th>Date Added</th>
+
+                <th>Action</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <!-- Products will be added here -->
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<!-- ================= PAGINATION ================= -->
+
+<div class="pagination">
+
+    <button onclick="previousPage()">
+
+        <i class="fa-solid fa-angle-left"></i>
+
+        Previous
+
+    </button>
+
+    <span id="pageNumber">
+
+        Page 1
+
+    </span>
+
+    <button onclick="nextPage()">
+
+        Next
+
+        <i class="fa-solid fa-angle-right"></i>
+
+    </button>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+
+        © 2026 RR Global Admin Panel | All Rights Reserved.
+
+    </p>
+
+</footer>
+
+</div>
+
+</div>
+
+<script src="products.js"></script>
+
+</body>
+
+</html>
