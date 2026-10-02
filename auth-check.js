@@ -23,9 +23,13 @@ onAuthStateChanged(auth, async (user) => {
     // Case 3: Firebase user logged in - verify role in Firestore
     try {
         const userDocRef = doc(db, "users", user.uid);
-        const docSnap = await getDoc(userDocRef);
+        const fetchPromise = getDoc(userDocRef);
+        const timeoutPromise = new Promise((_, reject) =>
+            setTimeout(() => reject(new Error("Firestore fetch timeout")), 3500)
+        );
+        const docSnap = await Promise.race([fetchPromise, timeoutPromise]);
 
-        if (docSnap.exists()) {
+        if (docSnap && docSnap.exists()) {
             const userData = docSnap.data();
             if (userData.role !== "admin") {
                 alert("Access Denied: Admin privileges required.");
@@ -36,16 +40,20 @@ onAuthStateChanged(auth, async (user) => {
             }
             updateAdminUI(userData.name || "Admin User");
         } else {
-            // Document missing, check if user email is super admin
-            alert("Access Denied: Admin profile not found.");
-            await signOut(auth);
-            sessionStorage.clear();
-            window.location.href = "login.html";
+            // Document missing, check if user has adminAccess in session
+            if (sessionStorage.getItem("userRole") === "admin") {
+                updateAdminUI(user.displayName || user.email.split("@")[0]);
+            } else {
+                alert("Access Denied: Admin privileges required.");
+                await signOut(auth);
+                sessionStorage.clear();
+                window.location.href = "login.html";
+            }
         }
     } catch (error) {
         console.error("Auth check Firestore error:", error);
         // Fallback check if user is authenticated
-        updateAdminUI(user.email ? user.email.split("@")[0] : "Admin User");
+        updateAdminUI(user.displayName || (user.email ? user.email.split("@")[0] : "Admin User"));
     }
 });
 

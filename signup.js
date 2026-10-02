@@ -1,6 +1,11 @@
 import { auth, db } from "./firebase-config.js";
-import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { createUserWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import { doc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+// Warn if opened directly as file:// which blocks ES modules and Firebase
+if (window.location.protocol === "file:") {
+    alert("Warning: Please access this application via http://localhost:3000 rather than opening the HTML file directly. Direct file opening prevents Firebase authentication from executing.");
+}
 
 const signupForm = document.getElementById("signupForm");
 
@@ -38,12 +43,22 @@ if (signupForm) {
 
         try {
             // 1. Create account in Firebase Authentication
+            console.log("Registering user in Firebase Authentication with email:", email);
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;
+            console.log("Firebase Auth user created! UID:", user.uid, "Email:", user.email);
 
-            // 2. Save user profile into Firestore 'users' collection
+            // Update displayName in Firebase Auth profile directly
             try {
-                await setDoc(doc(db, "users", user.uid), {
+                await updateProfile(user, { displayName: name });
+            } catch (pErr) {
+                console.warn("Could not update Auth displayName:", pErr);
+            }
+
+            // 2. Save user profile into Firestore 'users' collection with timeout
+            let firestoreSaved = false;
+            try {
+                const firestorePromise = setDoc(doc(db, "users", user.uid), {
                     uid: user.uid,
                     name: name,
                     email: email,
@@ -51,11 +66,24 @@ if (signupForm) {
                     role: "user",
                     createdAt: new Date().toISOString()
                 });
+
+                const timeoutPromise = new Promise((_, reject) =>
+                    setTimeout(() => reject(new Error("Firestore save timed out")), 4000)
+                );
+
+                await Promise.race([firestorePromise, timeoutPromise]);
+                firestoreSaved = true;
+                console.log("Firestore document saved in 'users' collection for UID:", user.uid);
             } catch (firestoreErr) {
-                console.warn("Firestore profile save warning (check Firestore security rules):", firestoreErr);
+                console.warn("Firestore profile save notice:", firestoreErr.message || firestoreErr);
             }
 
-            alert("Signup Successful! Please login to continue.");
+            let successMessage = `Signup Successful!\nEmail: ${email}\n\nYour account is now registered in Firebase Authentication.`;
+            if (!firestoreSaved) {
+                console.info("Tip: Enable Cloud Firestore Database in Firebase Console to also view full profiles in the Firestore 'users' collection.");
+            }
+
+            alert(successMessage);
             window.location.href = "login.html";
 
         } catch (err) {
@@ -63,7 +91,7 @@ if (signupForm) {
             let message = "Signup failed. Please try again.";
 
             if (err.code === "auth/email-already-in-use") {
-                message = "This email is already registered. Please go to Login.";
+                message = `This email (${email}) is already registered in Firebase. Please go to Login.`;
             } else if (err.code === "auth/invalid-email") {
                 message = "Please enter a valid email address.";
             } else if (err.code === "auth/weak-password") {
@@ -78,7 +106,7 @@ if (signupForm) {
         } finally {
             if (submitBtn) {
                 submitBtn.disabled = false;
-                submitBtn.textContent = "Create Account";
+                submitBtn.textContent = "Sign Up as User";
             }
         }
     });

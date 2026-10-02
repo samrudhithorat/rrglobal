@@ -92,18 +92,22 @@ if (loginForm) {
 
             // 3. Fetch user profile from Firestore to determine role
             let userRole = "user";
-            let displayName = email.split("@")[0];
+            let displayName = user.displayName || email.split("@")[0];
 
             try {
                 const userDocRef = doc(db, "users", user.uid);
-                const userSnap = await getDoc(userDocRef);
-                if (userSnap.exists()) {
+                const fetchPromise = getDoc(userDocRef);
+                const timeoutPromise = new Promise((_, reject) =>
+                    setTimeout(() => reject(new Error("Firestore fetch timeout")), 3500)
+                );
+                const userSnap = await Promise.race([fetchPromise, timeoutPromise]);
+                if (userSnap && userSnap.exists()) {
                     const data = userSnap.data();
                     if (data.role) userRole = data.role;
                     if (data.name) displayName = data.name;
                 }
             } catch (fsErr) {
-                console.warn("Could not read user profile from Firestore:", fsErr);
+                console.warn("Could not read user profile from Firestore:", fsErr.message || fsErr);
             }
 
             sessionStorage.setItem("userRole", userRole);
