@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | RR Global Nexux</title>
+
+    <link rel="stylesheet" href="login.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= TOP HEADER ================= -->
+
+<div class="top-header">
+
+    <div class="logo">
+
+        <img src="logo.png" alt="Logo">
+
+    </div>
+    <nav>
+
+    <ul>
+
+        <li><a href="rr.html">Home</a></li>
+
+        <li><a href="about.html">About Us</a></li>
+
+        <li><a href="export.html">Export Products</a></li>
+
+        <li><a href="import.html">Import Products</a></li>
+
+        <li><a href="services.html">Services</a></li>
+
+        <li><a href="contact.html">Contact Us</a></li>
+
+    </ul>
+
+    <div class="nav-icons">
+
+        <input type="text" id="search" placeholder="Search...">
+
+        <button onclick="searchItem()">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </button>
+
+        <a href="cart.html">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span id="cartCount">0</span>
+
+        </a>
+
+        <a href="login.html">
+
+            <i class="fa-solid fa-user"></i>
+
+        </a>
+
+    </div>
+
+</nav>
+    
+
+</div>
+
+
+
+<!-- ================= LOGIN SECTION ================= -->
+
+<section class="login-section">
+
+<div class="login-box">
+
+<h1>Login</h1>
+
+<p>Please login to your account to continue.</p>
+
+<form id="loginForm">
+
+<label>Email Address</label>
+
+<div class="input-box">
+
+<i class="fa-solid fa-envelope"></i>
+
+<input type="email"
+name="email"
+placeholder="Enter your email address"
+required>
+
+</div>
+
+<label>Password</label>
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+type="password"
+id="password"
+name="password"
+placeholder="Enter your password"
+required>
+
+<i
+class="fa-solid fa-eye"
+id="eye"
+onclick="showPassword()">
+</i>
+
+</div>
+
+<div class="remember">
+
+<label>
+
+<input type="checkbox">
+
+Remember Me
+
+</label>
+
+<a href="forgotpassword.html">
+
+Forgot Password?
+
+</a>
+
+</div>
+
+<button type="submit" class="login-btn">
+
+Login
+
+</button>
+<!-- OR Line -->
+
+<div class="or-line">
+
+    <hr>
+
+    <span>OR</span>
+
+    <hr>
+
+</div>
+
+<!-- Google & Apple Login -->
+
+<div class="social-login">
+
+    <!-- Google Login -->
+    <a href="/auth/google" class="google-btn">
+
+        <img src="images/google.png" alt="Google">
+
+        Continue with Google
+
+    </a>
+
+    <!-- Apple Login -->
+    <a href="/auth/apple" class="apple-btn">
+
+        <img src="images/apple.png" alt="Apple">
+
+        Continue with Apple
+
+    </a>
+
+</div>
+
+<!-- Register -->
+
+<div class="register">
+
+    <p>Don't have an account?</p>
+
+    <a href="signup.html" class="user-btn">
+
+        <i class="fa-regular fa-user"></i>
+
+        Sign Up as User
+
+    </a>
+
+    <a href="adminsignup.html" class="admin-btn">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        Sign Up as Admin
+
+    </a>
+
+</div>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footer">
+
+    <div class="footer-box">
+
+        <img src="logo.png" alt="Logo">
+
+        <p>
+
+            Your trusted partner in global trade and business solutions.
+            We connect markets and deliver quality worldwide.
+
+        </p>
+
+    </div>
+
+    <div class="footer-box">
+
+        <h3>Quick Links</h3>
+
+        <a href="rr.html">Home</a>
+
+        <a href="about.html">About Us</a>
+
+        <a href="export.html">Export Products</a>
+
+        <a href="import.html">Import Products</a>
+
+        <a href="services.html">Services</a>
+
+        <a href="cyber.html">Cyber Security</a>
+
+        <a href="contact.html">Contact Us</a>
+
+    </div>
+
+    <div class="footer-box">
+
+        <h3>Our Products</h3>
+
+        <p>Jaggery & Products</p>
+
+        <p>Metal Springs</p>
+
+        <p>Turmeric</p>
+
+        <p>Organic Fertilizers</p>
+
+        <p>All Types of Glasses</p>
+
+    </div>
+
+    <div class="footer-box">
+
+        <h3>Our Services</h3>
+
+        <p>Trade Compliance</p>
+
+        <p>Corporate Legal Support</p>
+
+        <p>Intellectual Property</p>
+
+        <p>Tax & Regulatory Advisory</p>
+
+        <p>Dispute Resolution</p>
+
+        <p>Cyber Security</p>
+
+    </div>
+
+    <div class="footer-box">
+
+        <h3>Contact Us</h3>
+
+        <p><i class="fa-solid fa-location-dot"></i> Pune, Maharashtra</p>
+
+        <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+
+        <p><i class="fa-solid fa-envelope"></i> info@rrglobalnexux.com</p>
+
+    </div>
+
+</div>
+
+<div class="copyright">
+
+    © 2025 RR Global Nexux. All Rights Reserved.
+
+</div>
+
+</footer>
+
+<script type="module" src="login.js"></script>
+
+</body>
+
+</html>

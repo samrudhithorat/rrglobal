@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RR Global Admin - Settings</title>
+
+<link rel="stylesheet" href="settings.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+<img src="logo.png">
+
+<h2>RR Global</h2>
+
+</div>
+
+<ul>
+
+<li>
+
+<a href="dashboard.html">
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+<li>
+
+<a href="products.html">
+
+<i class="fa-solid fa-box"></i>
+
+All Products
+
+</a>
+
+</li>
+
+<li>
+
+<a href="orders.html">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Orders
+
+</a>
+
+</li>
+
+
+<li class="active">
+
+<a href="settings.html">
+
+<i class="fa-solid fa-gear"></i>
+
+Settings
+
+</a>
+
+</li>
+
+</ul>
+
+<!-- QUICK SUMMARY -->
+
+<div class="summary">
+
+<h3>Quick Summary</h3>
+
+<p>Total Products <span id="totalProduct">0</span></p>
+
+<p>Export Products <span id="exportCount">0</span></p>
+
+<p>Import Products <span id="importCount">0</span></p>
+
+<p>Total Orders <span id="orderCount">0</span></p>
+
+<p>Total Users <span id="userCount">0</span></p>
+
+</div>
+
+</div>
+
+<!-- ================= MAIN ================= -->
+
+<div class="main">
+
+<div class="topbar">
+
+<div>
+
+<h1>Settings</h1>
+
+<p>Manage your website information</p>
+
+</div>
+
+</div>
+
+<!-- ================= WEBSITE DETAILS ================= -->
+
+<div class="card">
+
+<h2>General Settings</h2>
+
+<form id="settingsForm">
+
+<div class="row">
+
+<div class="input-box">
+
+<label>Website Name</label>
+
+<input
+type="text"
+id="websiteName">
+
+</div>
+
+<div class="input-box">
+
+<label>Admin Name</label>
+
+<input
+type="text"
+id="adminName">
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-box">
+
+<label>Email</label>
+
+<input
+type="email"
+id="email">
+
+</div>
+
+<div class="input-box">
+
+<label>Phone</label>
+
+<input
+type="text"
+id="phone">
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-box">
+
+<label>Address</label>
+
+<textarea
+id="address"
+rows="4"></textarea>
+
+</div>
+
+</div>
+
+<button
+type="submit"
+class="save">
+
+Save Settings
+
+</button>
+
+</form>
+
+</div>
+
+<!-- PASSWORD -->
+
+<div class="card">
+
+<h2>Change Password</h2>
+
+<form id="passwordForm">
+
+<div class="row">
+
+<div class="input-box">
+
+<label>Current Password</label>
+
+<input
+type="password"
+id="currentPassword">
+
+</div>
+
+<div class="input-box">
+
+<label>New Password</label>
+
+<input
+type="password"
+id="newPassword">
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-box">
+
+<label>Confirm Password</label>
+
+<input
+type="password"
+id="confirmPassword">
+
+</div>
+
+</div>
+
+<button
+type="submit"
+class="save">
+
+Update Password
+
+</button>
+
+</form>
+
+</div>
+
+<!-- WEBSITE OPTIONS -->
+
+<div class="card">
+
+<h2>Website Preferences</h2>
+
+<div class="check-box">
+
+<label>
+
+<input
+type="checkbox"
+id="maintenance">
+
+Maintenance Mode
+
+</label>
+
+</div>
+
+<div class="check-box">
+
+<label>
+
+<input
+type="checkbox"
+id="emailNotification">
+
+Email Notifications
+
+</label>
+
+</div>
+
+<div class="check-box">
+
+<label>
+
+<input
+type="checkbox"
+id="darkMode">
+
+Dark Mode
+
+</label>
+
+</div>
+
+<br>
+
+<button
+onclick="savePreference()"
+class="save">
+
+Save Preferences
+
+</button>
+
+</div>
+
+<footer>
+
+© 2026 RR Global Admin Panel | All Rights Reserved.
+
+</footer>
+
+</div>
+
+</div>
+
+<script src="settings.js"></script>
+
+</body>
+
+</html>
